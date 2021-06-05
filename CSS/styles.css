@@ -385,14 +385,21 @@ ul {
   display: flex;
 }
 
-.logo-company {
+.logo-client {
   display: flex;
 
   width: 170px;
-  height: 92px;
+  height: 92iconpx;
   border-radius: 3px;
 
   border: 1px solid var(--logo-company-border);
+}
+
+/* ICONS */
+
+.icon {
+  width: 40px;
+  height: 40px;
 }
 
 /* Footer */
