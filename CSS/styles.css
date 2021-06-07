@@ -21,16 +21,21 @@
   --secondary-background-color: #f5f4fa;
   --hero-footer-background-color: #2f303a;
   --button-hover-color: #188ce8;
+  --box-shadow-our-team-elements: 0px 1px 1px rgba(0, 0, 0, 0.12),
+    0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+  --box-shadow-button-color: 0px 3px 1px rgba(0, 0, 0, 0.1),
+    0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
   --header-line-color: #ececec;
   --project-group-container-line-color: #eeeeee;
   --project-group-container-background-color: #ffffff;
   --img-overlay: rgba(47, 48, 58, 0.4);
   --logo-company-border: rgba(175, 177, 184, 1);
   --social-color: #afb1b8;
+  --social-footer-backgroundcolor: rgba(255, 255, 255, 0.1);
 }
 
 body {
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
   color: var(--main-color);
   background-color: var(--main-background-colorr);
   font-size: 14px;
@@ -43,8 +48,6 @@ svg {
   max-width: 100%;
   height: auto;
 }
-
-/* Утилиты */
 
 .visually-hidden {
   position: absolute;
@@ -91,7 +94,7 @@ ul {
 /* Logo */
 
 .logo {
-  font-family: "Raleway", sans-serif;
+  font-family: 'Raleway', sans-serif;
   color: var(--accent-blue);
   text-decoration: none;
 
@@ -157,6 +160,7 @@ ul {
 .site-nav .link:hover,
 .site-nav .link:focus {
   color: var(--accent-blue);
+  cursor: pointer;
 }
 
 /* Auth-nav */
@@ -189,6 +193,7 @@ ul {
 .auth-nav .link:hover,
 .auth-nav .link:focus {
   color: var(--accent-blue);
+  cursor: pointer;
 }
 
 .icon-mail {
@@ -279,7 +284,7 @@ ul {
 
 .feature-list-elements::before {
   display: block;
-  content: " ";
+  content: ' ';
   height: 120px;
   background: var(--secondary-background-color);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -359,8 +364,7 @@ ul {
   width: 270px;
   margin-right: 30px;
   background: var(--project-group-container-background-color);
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
-    0px 2px 1px rgba(0, 0, 0, 0.2);
+  box-shadow: var(--box-shadow-our-team-elements);
   border-radius: 0px 0px 4px 4px;
 
   text-align: center;
@@ -423,6 +427,7 @@ ul {
 .social-link:focus {
   background-color: var(--accent-blue);
   color: var(--white-color);
+  cursor: pointer;
 }
 
 .social-icon {
@@ -436,9 +441,6 @@ ul {
 .regular-clients-list {
   display: flex;
   justify-content: space-between;
-}
-
-.regular-clients-item {
 }
 
 .regular-clients-link {
@@ -461,12 +463,14 @@ ul {
 .clients-icon:hover,
 .clients-icon:focus {
   color: var(--accent-blue);
+  cursor: pointer;
 }
 
 .regular-clients-link:hover,
 .regular-clients-link:focus {
   color: var(--accent-blue);
   border: 1px solid var(--accent-blue);
+  cursor: pointer;
 }
 
 /* Footer */
@@ -476,6 +480,14 @@ ul {
 
   padding-top: 60px;
   padding-bottom: 60px;
+}
+
+.footer-container {
+  display: flex;
+}
+
+.footer-container-first {
+  display: block;
 }
 
 .footer-logo-studio {
@@ -510,6 +522,53 @@ ul {
   margin-top: 9px;
 }
 
+.footer-container-second {
+  display: block;
+  margin-left: 70px;
+}
+
+.footer-join-text {
+  color: var(--white-color);
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.143;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+
+  margin-bottom: 20px;
+}
+
+.social-link-footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+
+  background-color: var(--social-footer-backgroundcolor);
+  color: var(--white-color);
+}
+
+.social-link-footer:hover,
+.social-link-footer:focus {
+  background-color: var(--accent-blue);
+  cursor: pointer;
+}
+
+.social-icon {
+  width: 20px;
+  height: 20px;
+  fill: currentColor;
+}
+
+.icon-footer {
+  display: flex;
+  align-items: center;
+  width: 206px;
+  margin-top: 20px;
+}
+
 /* Button */
 
 .button {
@@ -535,6 +594,7 @@ ul {
 .button.primary:hover,
 .button.primary:focus {
   background-color: var(--button-hover-color);
+  cursor: pointer;
 }
 
 /* Button portfolio */
@@ -555,6 +615,8 @@ ul {
 .button.secondary:focus {
   color: var(--white-color);
   background-color: var(--accent-blue);
+  box-shadow: var(--box-shadow-button-color);
+  cursor: pointer;
 }
 
 .button-portfolio {
@@ -597,6 +659,7 @@ ul {
   box-sizing: border-box;
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
+  cursor: pointer;
 }
 
 .project-group-element:nth-child(3n) {
